@@ -1,0 +1,28 @@
+<div class="main">
+    <section class="selector">
+        <mat-form-field>
+            <mat-label>Selected Routine</mat-label>
+            <mat-select [(ngModel)]="selectedRoutine" name="routine">
+                <mat-option *ngFor="let routine of routinesArr; track routine" [value]="routine">{{routine}}</mat-option>              
+            </mat-select>
+        </mat-form-field>
+    </section>
+
+    <section class="timer">
+        <div class="timer_display">
+            <span class="timer_display_time">00:00</span>
+        </div>    
+    </section>
+
+    <section class="buttons">
+        <button class="button button_pause">
+            <mat-icon>pause</mat-icon>
+        </button>
+        <button class="button button_start">
+            <mat-icon>play_arrow</mat-icon>
+        </button>
+        <button class="button button_stop">
+            <mat-icon>stop</mat-icon>
+        </button>
+    </section>
+</div>
